@@ -31,7 +31,10 @@ ga('send', 'pageview');
 			<h1>Michael Bernstein</h1>
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
 		</div>
-
+		{{#if viewAlt}}
+		"!Min <button class="btn btn-default likeBtn"> Like  </button">"
+		
+		{{else}}
 		<h4>Projects</h4>
 		{{#each projects}}
 			<div class="project" id="{{id}}">
@@ -40,14 +43,14 @@ ga('send', 'pageview');
 						<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
 						<h4>{{title}}</h4>
 					</a>
-					{{#if viewAlt}}
-					<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
+					
+					<div class="likeCtr"><button class="btn btn-default likeBtn"> Like  </button"></div>
 					<div class="details"></div>
-					{{/if}
+					
 				</div>
 			</div>
 		{{/each}}
-
+		{{/if}}
 
 </body>
 </html>
